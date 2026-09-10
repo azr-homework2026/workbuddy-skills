@@ -214,4 +214,4 @@ description: 当用户希望对一个概念形成系统、深入、可核查的�
 - `references/bloom-taxonomy.md` —— 布鲁姆分类法速查（用于学习目标 & 自测题设计）
 - `references/deai-checklist.md` —— 去 AI 痕迹核查清单
 - `references/source-types.md` —— 不同学科的可信来源类型
-- `references/INDEX-template.md` —— learning-materials 索引模板
+- `references/learning-materials-index-template.md` —— learning-materials 索引模板

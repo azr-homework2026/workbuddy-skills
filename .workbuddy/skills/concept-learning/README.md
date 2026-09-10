@@ -55,7 +55,7 @@ AI 写出来的东西只是初稿。你（人类作者）必须做两件事：
     ├── bloom-taxonomy.md        ← 布鲁姆分类法速查
     ├── deai-checklist.md       ← 去 AI 痕迹清单
     ├── source-types.md         ← 不同学科的可信来源
-    └── INDEX-template.md       ← learning-materials 索引
+    └── learning-materials-index-template.md   ← learning-materials 索引模板
 ```
 
 ## 怎么验证 Skill 真的在工作

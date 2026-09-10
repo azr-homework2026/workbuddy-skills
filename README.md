@@ -16,9 +16,9 @@
 workbuddy-skills/
 ├── .workbuddy/
 │   └── skills/
-│       ├── learning-skill/                # 占位 Skill（第一个）
+│       ├── learning-skill/                # ⚠️ 占位 Skill（仅目录结构示例，非可用 Skill）
 │       │   └── SKILL.md
-│       └── concept-learning/              # 核心 Skill：七段式概念学习包生成器
+│       └── concept-learning/              # ✅ 项目级 Skill（核心）：七段式概念学习包生成器
 │           ├── SKILL.md                   # 主入口（六要素：场景/输入/步骤/输出/来源/自检）
 │           ├── README.md
 │           └── references/
@@ -53,10 +53,12 @@ workbuddy-skills/
 
 本仓库现有 Skill：
 
-| Skill 名 | 作用 | 入口 |
-|---------|------|------|
-| `learning-skill` | 占位 / 起步模板 | `.workbuddy/skills/learning-skill/SKILL.md` |
-| `concept-learning` | 七段式概念学习包生成器 | `.workbuddy/skills/concept-learning/SKILL.md` |
+| Skill 名 | 状态 | 作用 | 入口 |
+|---------|------|------|------|
+| **`concept-learning`** | ✅ **项目级 Skill（核心）** | 七段式概念学习包生成器 | `.workbuddy/skills/concept-learning/SKILL.md` |
+| `learning-skill` | 🟡 **占位 / 模板** | 仓库初始化时建的最简示例，**不用于实际工作流** | `.workbuddy/skills/learning-skill/SKILL.md` |
+
+> 📌 **项目级 Skill 指 `concept-learning`**。`learning-skill` 是仓库创建当天放进来的最小占位文件，仅用于演示 `.workbuddy/skills/<name>/SKILL.md` 的目录结构，**不是可用的工作流 Skill**。后续若新增 Skill，请按 `concept-learning` 的六要素结构（适用场景 / 输入信息 / 生成步骤 / 输出结构 / 资料来源要求 / 自检要求）来写。
 
 ## 如何在 WorkBuddy 中调用
 
@@ -80,6 +82,25 @@ WorkBuddy 会自动扫描工作区下的 `.workbuddy/skills/`，把每个 Skill 
 ### 方式 3：在 WorkBuddy 提示词里显式引用
 
 > "请按 `.workbuddy/skills/concept-learning/SKILL.md` 的七段式流程，给 X 概念做一份学习资料。"
+
+### ⚙️ Skill 加载机制（重要）
+
+WorkBuddy 自动扫描的 Skill 目录是 **WorkBuddy 工作区根目录的 `.workbuddy/skills/`**，**不**是仓库子目录里的 `.workbuddy/skills/`。
+
+| 位置 | 是否被 WorkBuddy 自动加载 | 用途 |
+|------|------------------------|------|
+| `workbuddy-skills/.workbuddy/skills/concept-learning/` | ❌（在仓库子目录里） | 仓库内版本控制 |
+| `<workbuddy 工作区根>/.workbuddy/skills/concept-learning/` | ✅（WorkBuddy 自动扫描） | WorkBuddy 运行时加载 |
+
+为了让本仓库的 Skill 在 WorkBuddy 里**真正可用**，本项目还把这个 Skill 复制到了 WorkBuddy 工作区根目录：
+
+```bash
+# 等价命令（已执行）
+cp -r workbuddy-skills/.workbuddy/skills/concept-learning \
+      <workbuddy 工作区>/.workbuddy/skills/concept-learning
+```
+
+> 之后 WorkBuddy 启动时会自动加载它，会话里直接说"用 concept-learning 帮我做 XXX"即可。
 
 ## 已生成的学习资料
 
