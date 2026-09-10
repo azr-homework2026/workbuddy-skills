@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Agent 学习笔记</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; line-height: 1.7; color: #222; }
+    h1 { border-bottom: 2px solid #4f8cff; padding-bottom: 6px; }
+    h2 { color: #4f8cff; }
+    code { background: #f4f6fa; padding: 2px 6px; border-radius: 4px; font-size: 0.95em; }
+    .placeholder { background: #fff8dc; border-left: 4px solid #f5c518; padding: 12px 16px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Agent 学习笔记</h1>
+  <div class="placeholder">占位页 —— 这里将记录我对 Agent 概念的理解、典型架构、关键论文与代码示例。</div>
+
+  <h2>1. 什么是 Agent</h2>
+  <p>Agent 是一类能够<strong>感知环境 → 决策 → 行动</strong>的系统。与传统 LLM 应用的差别在于：</p>
+  <ul>
+    <li><strong>工具调用</strong>：可以调用外部 API、代码执行器、浏览器等。</li>
+    <li><strong>循环迭代</strong>：能根据中间反馈调整下一步动作。</li>
+    <li><strong>长期记忆</strong>：具备跨会话的状态保持能力。</li>
+  </ul>
+
+  <h2>2. 典型架构</h2>
+  <pre><code>User → LLM(Reasoning) → Tool/Action → Observation → LLM → ... → Answer</code></pre>
+
+  <h2>3. 待补充</h2>
+  <p>ReAct / Reflexion / AutoGPT / BabyAGI / Toolformer ……</p>
+</body>
+</html>

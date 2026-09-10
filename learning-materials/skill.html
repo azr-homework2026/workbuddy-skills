@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>Skill 学习笔记</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", "PingFang SC", sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; line-height: 1.7; color: #222; }
+    h1 { border-bottom: 2px solid #4f8cff; padding-bottom: 6px; }
+    h2 { color: #4f8cff; }
+    code { background: #f4f6fa; padding: 2px 6px; border-radius: 4px; font-size: 0.95em; }
+    pre { background: #f4f6fa; padding: 12px; border-radius: 6px; overflow-x: auto; }
+    .placeholder { background: #fff8dc; border-left: 4px solid #f5c518; padding: 12px 16px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Skill 学习笔记</h1>
+  <div class="placeholder">占位页 —— 这里将整理 WorkBuddy Skill 的写法、YAML frontmatter 规范、以及与普通 Prompt 的区别。</div>
+
+  <h2>1. 什么是 Skill</h2>
+  <p>Skill = 一份结构化的"工作流说明文档"。它告诉智能体：</p>
+  <ul>
+    <li><strong>何时</strong>加载（<code>description</code> + <code>read_when</code>）</li>
+    <li><strong>如何</strong>执行（步骤、命令、约束）</li>
+    <li><strong>输出</strong>格式是什么</li>
+  </ul>
+
+  <h2>2. 最小 SKILL.md 模板</h2>
+  <pre>---
+name: my-skill
+description: 一句话说明在什么场景使用本 skill。
+---
+
+# my-skill
+
+## 何时使用
+- 触发条件 1
+- 触发条件 2
+
+## 步骤
+1. 第一步……
+2. 第二步……
+</pre>
+
+  <h2>3. Skill vs Prompt</h2>
+  <ul>
+    <li>Prompt：单次会话内的指令</li>
+    <li>Skill：跨会话、可版本管理、可持续优化的能力包</li>
+  </ul>
+</body>
+</html>
