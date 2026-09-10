@@ -1,38 +1,126 @@
+# ============================================
 # OS
+# ============================================
 .DS_Store
 Thumbs.db
 desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
 
+# ============================================
 # IDE
+# ============================================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.iml
+.project
+.classpath
+.settings/
 
+# ============================================
+# Sensitive / Credentials (CRITICAL)
+# ============================================
+# Environment files (any flavor)
+.env
+.env.*
+!.env.example
+.envrc
+
+# API keys / tokens / secrets
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.keystore
+credentials.json
+credentials.yml
+secrets.json
+secrets.yml
+service-account*.json
+gcloud-service-key.json
+*-credentials.json
+*-credentials.yml
+
+# SSH / GPG
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+*.gpg
+*.asc
+
+# GitHub / Git credentials
+.git-credentials
+.netrc
+gh-token.txt
+
+# Database dumps
+*.sql
+*.dump
+*.bak.db
+
+# ============================================
 # Node
+# ============================================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# ============================================
 # Python
+# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
 .venv/
 venv/
-.env
-.env.local
+env/
+.python-version
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
+# ============================================
 # Build / dist
+# ============================================
 dist/
 build/
 out/
 *.log
 
+# ============================================
 # Editor backup
+# ============================================
 *.bak
 *.tmp
+*.orig
+*.rej
+
+# ============================================
+# WorkBuddy / agent 相关
+# ============================================
+.workbuddy/local-*
+.workbuddy/sessions/
+.workbuddy/cache/
+.workbuddy/credentials/
+.workbuddy/secrets/
+
+# ============================================
+# Other
+# ============================================
+# 不要忽略 .gitkeep（保留空目录占位）
+!.gitkeep
